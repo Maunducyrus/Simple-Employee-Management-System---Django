@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import create_employee, update_employee, delete_employee, list_employees
+
 urlpatterns = [
     path('', employee_list, name='employee_list'),
     path('create/', create_employee, name='create'),
