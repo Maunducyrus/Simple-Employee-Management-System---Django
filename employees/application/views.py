@@ -35,3 +35,8 @@ def update_employee(request, pk):
     return render(request, 'update.html', {'form': form})
 
 # Delete view
+def delete_employee(request, pk):
+    employee = Employee.objects.get(id=pk)
+    if request.method == 'POST':
+        employee.delete()
+        return redirect('list')
