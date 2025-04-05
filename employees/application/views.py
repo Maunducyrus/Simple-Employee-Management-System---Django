@@ -14,3 +14,8 @@ def create_employee(request):
     else:
         form = EmployeeForm()
     return render(request, 'create.html', {'form': form})
+
+# List view
+def list_employees(request):
+    employees = Employee.objects.all()
+    return render(request, 'list.html', {'employees': employees})
