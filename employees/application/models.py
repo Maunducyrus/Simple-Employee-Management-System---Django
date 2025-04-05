@@ -6,3 +6,6 @@ class Employee(models.Model):
     employee_name = models.CharField(max_length=100)
     employee_email = models.EmailField()
     employee_contact = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.employee_name
