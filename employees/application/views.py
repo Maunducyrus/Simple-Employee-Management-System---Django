@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .forms import EmployeeForm
+from django.shortcuts import redirect
+from .models import Employee
 
 # Create view
 def create_employee(request):
