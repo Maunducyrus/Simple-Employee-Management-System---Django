@@ -25,5 +25,6 @@ def update_employee(request, pk):
     employee = Employee.objects.get(id=pk)
     if request.method == 'POST':
         form = EmployeeForm(request.POST, instance=employee)
+        
         if form.is_valid():
             form.save()
