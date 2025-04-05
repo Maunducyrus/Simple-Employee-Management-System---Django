@@ -19,3 +19,5 @@ def create_employee(request):
 def list_employees(request):
     employees = Employee.objects.all()
     return render(request, 'list.html', {'employees': employees})
+
+# Update view
