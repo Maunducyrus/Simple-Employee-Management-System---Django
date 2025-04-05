@@ -39,4 +39,4 @@ def delete_employee(request, pk):
     employee = Employee.objects.get(id=pk)
     if request.method == 'POST':
         employee.delete()
-        return redirect('list')
+    return redirect('list')
