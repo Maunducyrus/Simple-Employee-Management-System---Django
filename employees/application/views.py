@@ -29,3 +29,7 @@ def update_employee(request, pk):
         if form.is_valid():
             form.save()
             return redirect('list')
+        
+    else:
+        form = EmployeeForm(instance=employee)
+    return render(request, 'update.html', {'form': form})
