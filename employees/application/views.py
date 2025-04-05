@@ -13,4 +13,4 @@ def create_employee(request):
             return redirect('list')
     else:
         form = EmployeeForm()
-        return render(request, 'create.html', {'form': form})
+    return render(request, 'create.html', {'form': form})
