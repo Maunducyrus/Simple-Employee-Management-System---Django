@@ -33,3 +33,5 @@ def update_employee(request, pk):
     else:
         form = EmployeeForm(instance=employee)
     return render(request, 'update.html', {'form': form})
+
+# Delete view
