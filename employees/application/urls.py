@@ -7,6 +7,5 @@ urlpatterns = [
     path('delete/<int:pk>/', delete_employee, name='delete'),
 ]
 
-urlpatterns = [
-   path('', Home, name='home'), 
-]
+# This code defines the URL patterns for the CRUD application. 
+# It maps URLs to their corresponding views, allowing users to create, update, delete, and list employees.
