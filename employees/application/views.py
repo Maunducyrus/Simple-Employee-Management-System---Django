@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import EmployeeForm
 
 # Create view
 def create_employee(request):
