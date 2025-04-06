@@ -2,9 +2,9 @@
 {% block title %}Create Employee{% endblock %}
 {% block content %}
 
-<form method="POST">
+<form method="POST" class="form-group pt-4">
     {% csrf_token %}
     {{ form.as_p }}
-    
+
 </form>
 {% endblock%}
