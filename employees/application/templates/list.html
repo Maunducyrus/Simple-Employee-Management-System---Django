@@ -7,4 +7,28 @@
     <a class="btn btn-primary" href="{% url 'create' %}" >Create Employee</a>
 </div>
 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.salary }}</td>
+            <td class="d-flex justify-content-around">
+                <a class="btn btn-info" href="{% url 'update' employee.id %}">Edit</a>
+                <a class="btn btn-danger" href="{% url 'delete' employee.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
 {% endblock %}
