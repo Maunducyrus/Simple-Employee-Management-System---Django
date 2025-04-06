@@ -6,7 +6,7 @@
     {% csrf_token %}
     {{ form.as_p }}
 
-<button type="submit" class="btn btn-primary">Save Employee</button>
+<button type="submit" class="btn btn-primary">Save Employee</button><br>
 <a href={% url 'list' %} class="btn btn-secondary">Cancel</a>
 
 </form>
