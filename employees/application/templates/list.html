@@ -30,7 +30,7 @@
                 <a class="btn btn-success btn-sm" href="{% url 'update' employee.pk %}">Edit</a>
                 <button class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#deleteModal" 
-                        data-id={{ employee.pk }}>Delete</button>
+                        data-id="{{ employee.pk }}">Delete</button>
             </td>
         </tr>
         {% endfor %}
