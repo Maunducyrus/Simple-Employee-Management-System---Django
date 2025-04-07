@@ -61,7 +61,8 @@
     deleteModal.addEventListener('show.bs.modal', function(event) {
         const button = event.relatedTarget;
         const employeeId = button.getAttribute('data-id')
-        const deleteForm = document.getElementById('deleteFormorm')
+        const deleteForm = document.getElementById('deleteForm')
+        deleteForm.action = `/delete/${employeeId};`
     })
     </script>
   
