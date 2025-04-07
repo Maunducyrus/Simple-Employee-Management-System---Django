@@ -28,7 +28,7 @@
             <td>{{ employee.employee_contact }}</td>
             <td class="d-flex justify-content-around">
                 <a class="btn btn-success btn-sm" href="{% url 'update' employee.pk %}">Edit</a>
-                <a class="btn btn-danger" href="">Delete</a>
+                <button class="btn btn-danger">Delete</button>
             </td>
         </tr>
         {% endfor %}
