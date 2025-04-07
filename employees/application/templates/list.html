@@ -27,8 +27,10 @@
             <td>{{ employee.employee_email }}</td>
             <td>{{ employee.employee_contact }}</td>
             <td class="d-flex justify-content-around">
-                <a class="btn btn-success btn-sm" href="{% url 'update' employee.id %}">Edit</a>
-                <button class="btn btn-danger" data-bs-target="#deleteModal" data-bs-toggle="modal" data-id={{employee.id}}>Delete</button>
+                <a class="btn btn-success btn-sm" href="{% url 'update' employee.pk %}">Edit</a>
+                <button class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#deleteModal" 
+                        data-id={{employee.id}}>Delete</button>
             </td>
         </tr>
         {% endfor %}
