@@ -59,13 +59,13 @@
     </div>
   </div>
   <script>
-    const deleteModal = document.getElementById('deleteModal')
+    const deleteModal = document.getElementById('deleteModal');
     deleteModal.addEventListener('show.bs.modal', function(event) {
         const button = event.relatedTarget;
         const employeeId = button.getAttribute('data-id')
-        const deleteForm = document.getElementById('deleteForm')
+        const deleteForm = document.getElementById('deleteForm');
         deleteForm.action = `/delete/${employeeId}/`; // Update the form action with the employee ID
-    })
+    });
     </script>
   
 {% endblock %}
