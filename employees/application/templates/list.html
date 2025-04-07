@@ -22,6 +22,7 @@
         {% for employee in employees %}
         <tr>
             <td>{{ forloop.counter }}</td>
+            <td>{{ employee.employee_id }}</td>
             <td>{{ employee.employee_name }}</td>
             <td>{{ employee.employee_email }}</td>
             <td>{{ employee.employee_contact }}</td>
