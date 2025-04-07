@@ -36,7 +36,8 @@ def update_employee(request, pk):
 
 # Delete view
 def delete_employee(request, pk):
-    employee = Employee.objects.get(id=pk)
+    employee = get_object_or_404(Employee, employee_id=pk)
+    # employee = Employee.objects.get(id=pk)
     if request.method == 'POST':
         employee.delete()
         return redirect('list')
