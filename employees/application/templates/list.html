@@ -19,6 +19,7 @@
         </tr>
     </thead>
     <tbody>
+        {% if employees %}
         {% for employee in employees %}
         <tr>
             <td>{{ forloop.counter }}</td>
