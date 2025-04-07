@@ -2,6 +2,7 @@
 {% block title %}Create Employee{% endblock %}
 {% block content %}
 
+{%load crispy_forms_tags %}
 <form method="POST" class="form-group card p-4">
     {% csrf_token %}
     {{ form.as_p }}
