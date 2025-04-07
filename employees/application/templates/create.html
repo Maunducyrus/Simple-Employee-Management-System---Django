@@ -3,6 +3,7 @@
 {% block content %}
 
 {%load crispy_forms_tags %}
+<h2>Create a new Employee</h2>
 <form method="POST" class="form-group card p-4">
     {% csrf_token %}
     {{ form | crispy }}
