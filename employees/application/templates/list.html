@@ -64,7 +64,8 @@
         const button = event.relatedTarget;
         const employeeId = button.getAttribute('data-id')
         const deleteForm = document.getElementById('deleteForm');
-        deleteForm.action = `/delete/${employeeId}/`; // Update the form action with the employee ID
+        //deleteForm.action = `/delete/${employeeId}/`; 
+        deleteForm.action = '{% url "delete" 0 %}'.replace('0', employeeId);
     });
     </script>
   
