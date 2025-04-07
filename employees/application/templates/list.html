@@ -28,17 +28,12 @@
             <td>{{ employee.employee_contact }}</td>
             <td class="d-flex justify-content-around">
                 <a class="btn btn-success btn-sm" href="{% url 'update' employee.pk %}">Edit</a>
-                <button class="btn btn-danger" data-bs-target="#deleteModal" data-bs-toggle="modal">Delete</button>
+                <button class="btn btn-danger" data-bs-target="#deleteModal" data-bs-toggle="modal" data-id={{employee.pk}}>Delete</button>
             </td>
         </tr>
         {% endfor %}
     </tbody>
     </table>
-
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
