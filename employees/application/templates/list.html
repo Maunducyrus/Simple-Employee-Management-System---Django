@@ -22,12 +22,11 @@
         {% for employee in employees %}
         <tr>
             <td>{{ forloop.counter }}</td>
-            <td>{{ employee.id }}</td>
             <td>{{ employee.employee_name }}</td>
             <td>{{ employee.employee_email }}</td>
             <td>{{ employee.employee_contact }}</td>
             <td class="d-flex justify-content-around">
-                <a class="btn btn-info" href="{% url 'update' employee.id %}">Edit</a>
+                <a class="btn btn-success btn-sm" href="{% url 'update' employee.pk %}">Edit</a>
                 <a class="btn btn-danger" href="{% url 'delete' employee.id %}">Delete</a>
             </td>
         </tr>
