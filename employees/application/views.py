@@ -22,7 +22,7 @@ def list_employees(request):
 
 # Update view
 def update_employee(request, pk):
-    employee = Employee.objects.get(id=pk)
+    employee = Employee.objects.get(employee_id=emp_id)
     if request.method == 'POST':
         form = EmployeeForm(request.POST, instance=employee)
 
