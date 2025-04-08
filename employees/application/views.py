@@ -21,7 +21,7 @@ def list_employees(request):
     return render(request, 'list.html', {'employees': employees})
 
 # Update view
-def update_employee(request, pk):
+def update_employee(request, emp_id):
     employee = Employee.objects.get(employee_id=emp_id)
     if request.method == 'POST':
         form = EmployeeForm(request.POST, instance=employee)
